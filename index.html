@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculadora</title>
+    <link rel="stylesheet" href="static/css/normalize.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+  </head>
+  <body>
+    <div class="bg-gradient">
+      <div
+        class="calc-element"
+        data-tilt
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+      >
+        <div class="">
+          <input id="operation-input" class="input-operation" type="text" />
+        </div>
+        <!-- grid layout -->
+        <div class="">
+          <div id="layout-calc" class="grid-layout">
+            <button class="btn-generic-press">1</button>
+            <button class="btn-generic-press">2</button>
+            <button class="btn-generic-press">3</button>
+            <button class="btn-generic-press">4</button>
+            <button class="btn-generic-press">5</button>
+            <button class="btn-generic-press">6</button>
+            <button class="btn-generic-press">7</button>
+            <button class="btn-generic-press">8</button>
+            <button class="btn-generic-press">9</button>
+            <!-- operator -->
+            <button
+              data-delete="delete"
+              class="btn-generic-press img-btn-delete"
+            >
+              <img data-delete="delete" src="static/svg/delete.svg" alt="" />
+            </button>
+            <button class="btn-generic-press">(</button>
+            <button class="btn-generic-press">)</button>
+            <button class="btn-generic-press">/</button>
+            <button class="btn-generic-press">+</button>
+            <button class="btn-generic-press">-</button>
+            <button class="btn-generic-press">*</button>
+            <button class="btn-generic-press">.</button>
+            <button class="btn-generic-press">%</button>
+            <button class="btn-generic-press">//</button>
+            <button class="btn-generic-press">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="static/js/tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".your-element"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+    <script type="text/javascript" src="static/js/logic.js"></script>
+  </body>
+</html>
